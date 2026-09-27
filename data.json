@@ -1,0 +1,8 @@
+[
+    { "numeroCuenta": 1, "titular": "Ivan de Pineda", "tipo": "Caja de Ahorro", "saldo": 75000, "activa": true },
+    { "numeroCuenta": 2, "titular": "Mariano Iudica", "tipo": "Cuenta Corriente", "saldo": 180000, "activa": true },
+    { "numeroCuenta": 3, "titular": "Marcelo Tinelli", "tipo": "Caja de Ahorro", "saldo": 25000, "activa": false },
+    { "numeroCuenta": 4, "titular": "Julian Weich", "tipo": "Caja de Ahorro", "saldo": 310000, "activa": true },
+    { "numeroCuenta": 5, "titular": "Franco Colapinto", "tipo": "Caja de Ahorro", "saldo": 1850000, "activa": true },
+    { "numeroCuenta": 6, "titular": "Guido Suller", "tipo": "Cuenta Corriente", "saldo": 310000, "activa": true }
+]

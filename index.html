@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Banking - Panel de Gestion - API & Librerias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Sistema de Gestion Bancaria</h1>
+        <p>Panel interactivo de administracion de cuentas</p>
+    </header>
+
+    <main class="contenedor-principal">
+        <section class="card formulario-seccion">
+            <h2>Registrar Nueva Cuenta</h2>
+            <form id="form-cuenta">
+                <div class="grupo-input">
+                    <label for="input-titular">Titular:</label>
+                    <input type="text" id="input-titular" placeholder="Ej: Lionel Messi" required>
+                </div>
+                <div class="grupo-input">
+                    <label for="select-tipo">Tipo de Cuenta:</label>
+                    <select id="select-tipo">
+                        <option value="Caja de Ahorro">Caja de Ahorro</option>
+                        <option value="Cuenta Corriente">Cuenta Corriente</option>
+                    </select>
+                </div>
+                <div class="grupo-input">
+                    <label for="input-saldo">Saldo Inicial ($):</label>
+                    <input type="number" id="input-saldo" placeholder="Ej: 50000" min="0" step="0.01" required>
+                </div>
+                <button type="submit" id="btn-crear" class="btn btn-primary">+ Crear Cuenta</button>
+            </form>
+        </section>
+
+        <section class="card busqueda-seccion">
+            <h2>Buscador en Tiempo Real</h2>
+            <div class="grupo-input">
+                <label for="input-busqueda">Buscar por nombre de titular:</label>
+                <input type="text" id="input-busqueda" placeholder="Escribe para filtrar...">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Filtros Rapidos</h2>
+            <div class="botonera-filtros">
+                <button id="btn-todas" class="btn btn-filtro">Todas las Cuentas</button>
+                <button id="btn-corrientes" class="btn btn-filtro">Cuentas Corrientes</button>
+                <button id="btn-ahorro" class="btn btn-filtro">Cajas de Ahorro</button>
+                <button id="btn-activas" class="btn btn-filtro">Activas</button>
+                <button id="btn-inactivas" class="btn btn-filtro">Inactivas</button>
+                <button id="btn-potenciales" class="btn btn-filtro">Potenciales (+500k)</button>
+            </div>
+        </section>
+
+        <section class="listado-seccion">
+            <h2>Cuentas Registradas</h2>
+            <div class="resumen-banco" style="margin-bottom: 1rem;">
+                <span>Total de Reservas Bancarias: </span>
+                <strong id="total-reservas">$0.00</strong>
+            </div>
+            <div id="contenedor-items" class="grid-cuentas"></div>
+        </section>
+    </main>
+</body>
+</html>
